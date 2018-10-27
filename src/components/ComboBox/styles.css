@@ -1,0 +1,29 @@
+.select-style {
+    border-bottom: 1px solid #ccc;        
+    overflow: hidden;
+    background: #fafafa;
+    margin-top: 20px;    
+}
+
+.select-style select {
+    padding: 5px 0px 5px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    font: 15px/24px 'Muli', sans-serif; 
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.select-style select:hober {
+    border-bottom: 1px solid #da552f; 
+}
+
+option{   
+    color: #aaa;
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;      
+}

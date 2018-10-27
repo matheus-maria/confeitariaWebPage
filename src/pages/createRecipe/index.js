@@ -3,6 +3,7 @@ import api from '../../services/api';
 import './styles.css';
 import ArrowBack from '../../components/ArrowBack/index';
 import Input from '../../components/Input/index';
+import ComboBox from '../../components/ComboBox/index';
 
 export default class CreateRecipe extends Component {
 
@@ -12,8 +13,21 @@ export default class CreateRecipe extends Component {
         photo:' ',
         categoryId:'',
         ingredients:[],
-        preparation:[]        
+        preparation:[],
+        category:[],   
     }    
+
+    componentDidMount(){
+        this.loadCategorys()
+    }
+
+    loadCategorys = async () => {
+        const response = await api.get(`/category`);
+
+        const { docs } = response.data        
+
+        this.setState({ category: docs });        
+    }
 
     render() {       
         
@@ -25,7 +39,8 @@ export default class CreateRecipe extends Component {
                 </div>                
                 <div className="body">
                     <Input title="Receita" onChange={(value) => this.setState({title : value})}/>   
-                    <Input title="Descrição" onChange={(value) => this.setState({description : value})}/>                 
+                    <Input title="Descrição" onChange={(value) => this.setState({description : value})}/>      
+                    <ComboBox options={this.state.category}/>           
                 </div> 
             </div>
         )
