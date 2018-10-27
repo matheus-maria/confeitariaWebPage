@@ -53,7 +53,7 @@ export default class Main extends Component {
             <div className="recipe">
                 <div className="header">
                     <h1>Receitas</h1>                    
-                    <Link to={`/recipe/${recipe._id}`}>
+                    <Link to={`/create`}>
                         <img id="createIcon" src={createIcon}/>
                     </Link>                    
                 </div>                
