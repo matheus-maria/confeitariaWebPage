@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import './styles.css';
+import arrowBack from './../../images/arrowBack.png'; 
 
 export default class Recipe extends Component {    
 
@@ -22,6 +24,9 @@ export default class Recipe extends Component {
                 
         return(
             <div className="recipe-info">
+                <Link to={'/'}>
+                    <img id="backIcon" src={arrowBack}/>
+                </Link>
                 <h1>{recipe.title}</h1>
                 <p>{recipe.description}</p>
             </div>
