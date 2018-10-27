@@ -4,7 +4,7 @@ input[type="text"]{font: 15px/24px 'Muli', sans-serif; color: #333; width: 100%;
 
 :focus{outline: none;}
 
-.col-3{ position: relative;} /* necessary to give position: relative to parent. */
+.col-3{ position: relative;margin-top: 15px} /* necessary to give position: relative to parent. */
 input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
 
 .effect-16{border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}

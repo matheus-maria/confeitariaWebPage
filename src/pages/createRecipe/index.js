@@ -6,17 +6,16 @@ import Input from '../../components/Input/index';
 
 export default class CreateRecipe extends Component {
 
-    state = {
-        recipe:{}
+    state = {        
+        title:'',
+        description:'',
+        photo:' ',
+        categoryId:'',
+        ingredients:[],
+        preparation:[]        
     }    
 
-    alertar = () => {
-        console.log(this.state.recipe);
-    }
-
-    render() {
-
-        const { recipe } = this.state;
+    render() {       
         
         return(
             <div className="recipe">
@@ -25,8 +24,9 @@ export default class CreateRecipe extends Component {
                     <h1>Criar Receita</h1> 
                 </div>                
                 <div className="body">
-                    <Input title="Receita"/>                    
-                </div>                
+                    <Input title="Receita" onChange={(value) => this.setState({title : value})}/>   
+                    <Input title="Descrição" onChange={(value) => this.setState({description : value})}/>                 
+                </div> 
             </div>
         )
     }
