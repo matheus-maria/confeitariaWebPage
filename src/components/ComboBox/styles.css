@@ -1,29 +1,26 @@
 .select-style {
     border-bottom: 1px solid #ccc;        
     overflow: hidden;
-    background: #fafafa;
     margin-top: 20px;    
 }
 
 .select-style select {
     padding: 5px 0px 5px;
     width: 100%;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
+    border: none;    
     -webkit-appearance: none;
     font: 15px/24px 'Muli', sans-serif; 
     color: #aaa;
     letter-spacing: 1px;
 }
 
-.select-style select:hober {
+.select-style select:hover {
+    transition-delay: 0.3s;
     border-bottom: 1px solid #da552f; 
 }
 
-option{   
+option{     
     color: #aaa;
-    background: #fafafa;
+    background: #fff;
     border-bottom: 1px solid #ccc;      
 }
